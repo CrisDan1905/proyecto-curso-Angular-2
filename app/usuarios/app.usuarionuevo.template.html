@@ -1,0 +1,31 @@
+<br/>
+<div class="container">
+    <form [formGroup]="userForm" (submit)="saveUser()" >
+        <div class="form-group">
+            <label for="name">Nombre</label>
+            <input formControlName="name" type="text" name="name" id="name" placeholder="dígite nombre" class="form-control">
+            <validador-component [control]="userForm.controls.name" role="alert" ></validador-component>
+        </div>
+
+        <div class="form-group">
+            <label for="username">Nombre de usuario</label>
+            <input type="text" formControlName="username" name="username" id="username" placeholder="dígite nombre de usuario" class="form-control" >
+            <validador-component [control]="userForm.controls.username" role="alert" ></validador-component>
+        </div>
+
+        <div class="form-group">
+            <label for="email">email</label>
+            <input type="email" formControlName="email" name="email" id="email" placeholder="dígite su email" class="form-control" >
+            <validador-component [control]="userForm.controls.email" role="alert" ></validador-component>
+        </div>
+
+        <div class="form-group">
+            <label for="numero">Telefono</label>
+            <input type="text" formControlName="telefono" name="numero" id="numero" placeholder="digite su numero" class="form-control" >
+            <validador-component [control]="userForm.controls.telefono" role="alert" ></validador-component>
+
+        </div>
+
+        <button type="submit" [disabled]="!userForm.valid" class="btn btn-primary"><span class="glyphicon glyphicon-envelope"></span> Enviar</button>
+    </form>
+</div>
