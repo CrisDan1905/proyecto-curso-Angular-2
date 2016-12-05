@@ -11,7 +11,7 @@ export class serviciovalidador {
     }
 
 
-    static emailValidator(control) {
+    static emailValidator(control: any) {
         if (control.value.match(/[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/)) {
             return null;
         } else {
@@ -19,7 +19,7 @@ export class serviciovalidador {
         }
     }
 
-    static phoneValidator(number){
+    static phoneValidator(number: any){
       if (number.value.match(/[0-9]/)) {
         return null;
       }else{
